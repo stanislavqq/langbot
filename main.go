@@ -12,9 +12,9 @@ import (
 )
 
 func main() {
-	os.Setenv("YANDEX_APIKEY", "trnsl.1.1.20191201T072431Z.b3fa9aa21826148c.6b2940b46538c4a2171ed684e0d9ab6e2073740a")
-	os.Setenv("TG_BOT_TOKEN", "820499277:AAEESZPkt_y3Uu4hV8HJ92FQPVGeLpq8WkM")
-	os.Setenv("PROXY_HOST", "121.9.253.214:1080")
+	os.Setenv("YANDEX_APIKEY", "YANDEX_API_KEY")
+	os.Setenv("TG_BOT_TOKEN", "YOUR_TELEGRAM_BOT_TOKEN")
+	os.Setenv("PROXY_HOST", "YOUR_PROXY_SOCKS5")
 	//proxyStr := "178.159.36.10:9050"
 	//proxyURL, err := url.Parse(proxyStr)
 	//if err != nil {
@@ -65,7 +65,7 @@ func main() {
 		if reflect.TypeOf(update.Message.Text).Kind() == reflect.String && update.Message.Text != "" {
 
 			if update.Message.Text == "/start" {
-				msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Привет! Напиши мне любую фразу на русском языке, и я отвечу тебе сообщением с перводом на английском. =) Попробуй)");
+				msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Привет! Напиши мне любую фразу на русском языке, и я отвечу тебе сообщением с перводом на английском. =) Попробуй)")
 				bot.Send(msg)
 				continue
 			} else {
